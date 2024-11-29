@@ -17,7 +17,9 @@ function createColorBox(color) {
     // Copy color code on click
     colorBox.addEventListener('click', () => {
         navigator.clipboard.writeText(color)
-            .then(() => alert(`Copied: ${color}`))
+            .then(() => {
+                alert(`🎉 Copied: ${color}`);
+            })
             .catch(err => console.error('Failed to copy color:', err));
     });
 
